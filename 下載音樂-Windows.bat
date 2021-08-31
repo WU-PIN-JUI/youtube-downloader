@@ -1,13 +1,13 @@
 @echo off
 setlocal enabledelayedexpansion
-title ¤U¸ü­µ¼Ö
+title ä¸‹è¼‰éŸ³æ¨‚
 color 04
 if %1.==. ( goto in )
 if EXIST %1 (
-echo ±qÀÉ®×Åª¨ú¡G%1
+echo å¾žæª”æ¡ˆè®€å–ï¼š%1
 timeout /t 2 /nobreak > nul
 cls
-echo ±qÀÉ®×Åª¨ú¡G%1 ...§¹¦¨
+echo å¾žæª”æ¡ˆè®€å–ï¼š%1 ...å®Œæˆ
 set n=0
 for /f %%i in (%1) do (
 echo.
@@ -20,11 +20,11 @@ goto done
 )
 :in
 cls
-set /p url=ºô§}¡H
+set /p url=ç¶²å€ï¼Ÿ
 youtube-dl -x --audio-format mp3 %url% --external-downloader aria2c --external-downloader-args "-x 16 -k 1M"
 :done
 echo.
 echo.
-echo ¤U¸ü§¹¦¨
+echo ä¸‹è¼‰å®Œæˆ
 timeout /t 3 /nobreak >nul
 exit
